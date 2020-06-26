@@ -6,7 +6,7 @@ script:
     - docker images jostino/node
 
 before_deploy:
-    - docker login -u jostino -p Windowze@2019
+    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     
 deploy:
     provider: script
