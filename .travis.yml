@@ -1,0 +1,6 @@
+sudo: required
+services:
+    - docker
+script:
+    - docker build -t jostino/node2 .
+    - docker images jostino/node2
