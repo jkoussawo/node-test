@@ -5,11 +5,11 @@ script:
     - docker build -t jostino/node2 .
     - docker images jostino/node2
 
-    before_deploy:
-        - docker login -u jostino -p Windowze@2019
+before_deploy:
+    - docker login -u jostino -p Windowze@2019
     
-    deploy:
-        provider: script
-        script: docker push jostino/node-test
-        on:
-            branch: master
+deploy:
+    provider: script
+    script: docker push jostino/node-test
+    on:
+        branch: master
