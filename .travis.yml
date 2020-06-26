@@ -2,14 +2,14 @@ sudo: required
 services:
     - docker
 script:
-    - docker build -t jostino/node2 .
-    - docker images jostino/node2
+    - docker build -t jostino/node .
+    - docker images jostino/node
 
 before_deploy:
     - docker login -u jostino -p Windowze@2019
     
 deploy:
     provider: script
-    script: docker push jostino/node-test
+    script: docker push jostino/node
     on:
         branch: master
